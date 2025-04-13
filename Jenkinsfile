@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage("configure backend") {
+    stage("run backend") {
       steps {
         echo 'Configuring gradle'
         withGradle() {
@@ -10,7 +10,7 @@ pipeline {
       }
     }
 
-     stage("configure frontend") {
+     stage("run frontend") {
       steps {
         echo 'Will configure frontend in future'
       }
