@@ -4,6 +4,7 @@ pipeline {
     stage("build") {
       steps {
         echo 'building the apllication...'
+        echo 'Testing the automatically triggering pipeline'
       }
     }
 
@@ -16,6 +17,7 @@ pipeline {
      stage("deploy") {
       steps {
         echo 'deploing the apllication...'
+        echo 'Testing the automatically triggering pipeline'
       }
     }
   }
