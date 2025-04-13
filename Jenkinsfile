@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    gradle 'Gradle 8.13'
+    gradle 'Gradle@8.13'
   }
   stages {
     stage("run backend") {
