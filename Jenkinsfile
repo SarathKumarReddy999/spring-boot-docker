@@ -1,23 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage("build") {
+    stage("configure backend") {
       steps {
-        echo 'building the apllication...'
-        echo 'Testing the automatically triggering pipeline'
+        echo 'Configuring gradle'
+        withGradle() {
+          sh './gradlew -v'
+        }
       }
     }
 
-     stage("test") {
+     stage("configure frontend") {
       steps {
-        echo 'testing the apllication...'
-      }
-    }
-
-     stage("deploy") {
-      steps {
-        echo 'deploing the apllication...'
-        echo 'Testing the automatically triggering pipeline'
+        echo 'Will configure frontend in future'
       }
     }
   }
