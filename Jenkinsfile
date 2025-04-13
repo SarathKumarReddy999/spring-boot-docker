@@ -1,12 +1,13 @@
 pipeline {
   agent any
+  tools {
+    gradle 'Gradle 8.13'
+  }
   stages {
     stage("run backend") {
       steps {
         echo 'Configuring gradle'
-        withGradle() {
-          sh './gradlew -v'
-        }
+        sh './gradlew -v'
       }
     }
 
